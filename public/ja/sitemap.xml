@@ -3,19 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://erikaobama.com/ja/categories/3d/</loc>
+    <loc>https://erikaobama.com/ja/categories/animation/</loc>
     <lastmod>2023-10-16T16:30:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://erikaobama.com/categories/3d/"
+                href="https://erikaobama.com/categories/animation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://erikaobama.com/ja/categories/3d/"
+                href="https://erikaobama.com/ja/categories/animation/"
                 />
   </url>
   
@@ -50,6 +50,23 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://erikaobama.com/ja/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://erikaobama.com/ja/categories/motion-graphics/</loc>
+    <lastmod>2023-10-16T16:30:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://erikaobama.com/categories/motion-graphics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://erikaobama.com/ja/categories/motion-graphics/"
                 />
   </url>
   
@@ -122,6 +139,23 @@
   </url>
   
   <url>
+    <loc>https://erikaobama.com/ja/categories/3d-modeling/</loc>
+    <lastmod>2023-08-19T11:12:04+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://erikaobama.com/categories/3d-modeling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://erikaobama.com/ja/categories/3d-modeling/"
+                />
+  </url>
+  
+  <url>
     <loc>https://erikaobama.com/ja/portfolio/on-codependency/</loc>
     <lastmod>2023-08-19T11:12:04+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -135,6 +169,23 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://erikaobama.com/ja/portfolio/on-codependency/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://erikaobama.com/ja/categories/design/</loc>
+    <lastmod>2023-08-19T11:12:03+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://erikaobama.com/categories/design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://erikaobama.com/ja/categories/design/"
                 />
   </url>
   
