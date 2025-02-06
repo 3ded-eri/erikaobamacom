@@ -1,8 +1,8 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import SkillSet from '../components/SkillSet.astro';
-import ArticlePost from '../components/ArticlePost.astro';
-import contactURL from '../components/contactURL.txt?raw';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SkillSet from '../../components/SkillSet.astro';
+import ArticlePost from '../../components/ArticlePost.astro';
+import contactURL from '../../components/contactURL.txt?raw';
 
 const pageCategory = "index"
 const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
