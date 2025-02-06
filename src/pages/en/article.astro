@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticlePost from '../../components/ArticlePost.astro';
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('../posts/en/*.md', { eager: true }));
 const pageTitle = "Article";
 ---
 <BaseLayout pageTitle={pageTitle}>
