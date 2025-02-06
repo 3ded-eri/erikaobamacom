@@ -5,7 +5,7 @@ import ArticlePost from '../../components/ArticlePost.astro';
 import contactURL from '../../components/contactURL.txt?raw';
 
 const pageCategory = "index"
-const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('../posts/en/*.md', { eager: true }));
 const pageTitle = "I'm a full-stack designer based in Fukuoka, Japan.";
 ---
 <BaseLayout pageTitle={pageTitle} pageCategory={pageCategory}>
