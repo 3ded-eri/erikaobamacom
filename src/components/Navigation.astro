@@ -1,0 +1,21 @@
+---
+import contactURL from './contactURL.txt?raw';
+---
+
+<div class="nav-links fade-left">
+    <a href=`/${Astro.currentLocale}/about/`>About</a>
+    <a href=`/${Astro.currentLocale}/article/`>Article</a>
+    <a href={contactURL}>Contact</a>
+    
+    { Astro.currentLocale === "en"
+        ?
+        <a href="/ja/" class="text-xs">[ 日本語 ]</a>
+        :
+        Astro.currentLocale === "ja"
+        ?
+        <a href="/en/" class="text-xs">[ English ]</a>
+        :
+        ``
+    }
+    <!-- <a href="/tags/">Tags</a> -->
+</div>

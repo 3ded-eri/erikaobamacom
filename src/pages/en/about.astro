@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SkillSet from '../../components/SkillSet.astro';
+import Timeline from '../../components/Timeline.astro';
+
+const pageTitle = "About Erika";
+---
+
+
+<BaseLayout pageTitle={pageTitle}>
+
+	<p class="intersect fade-right intersect-once">
+		In short, I'm a curious person. According to my friends, I'm nerdy about almost everything... As you see in the below.
+	</p>
+
+	<h2 class="intersect fade-down intersect-once">What I Offer</h2>
+	<SkillSet />
+
+	<h2 class="intersect fade-down intersect-once">Job History</h2>
+	<Timeline />
+
+</BaseLayout>

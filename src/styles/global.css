@@ -1,0 +1,399 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ----------
+    Variables
+  ---------- */
+
+  :root {
+    --bg-light: #fbfaf9;
+    --bg-light-tp: rgba(251, 250, 249, .9);
+    --text-light: #6d4f4f;
+    --text-light-tp: rgba(109, 79, 79, .9);
+    --bg-dark: #000;
+    --bg-dark-tp: rgba(251, 250, 249, .7);
+    --bg-quote-light: hsl(30, 20%, 94%);
+    --bg-quote-dark: hsl(40, 18%, 8%);
+    --text-dark: #8c8282;
+    --text-dark-tp: rgba(140, 130, 130, .97);
+    --hl-green-lt: #a8e6cf;
+    --hl-green-lt-tp: rgba(168, 230, 207, .97);
+    --hl-purple-lt: #d8d3f3;
+    --hl-purple-lt-tp: rgba(216, 211, 243, .97);
+    /* --hl-pink-lt: #ffe0e8; */
+    --hl-pink-lt: #ffdbe4;
+    --hl-pink-lt-tp: rgb(255, 224, 232, .85);
+    --hl-green-dk: #a1d4c3;
+    --hl-purple-dk: #c4c0de;
+    /* --hl-pink-dk: #e4b9c2; */
+    --hl-pink-dk: #e4b0bb;
+  }
+  
+
+/* ----------
+    Font families
+  ---------- */
+
+  @font-face {
+    font-family: 'heading-en';
+    src: local("Futura"), local("Trebuchet MS"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  /* 'ヒラギノ角ゴ ProN' , 'Hiragino Kaku Gothic ProN' , '游ゴシック' , '游ゴシック' , YuGothic , 'Yu Gothic' , 'メイリオ' , Meiryo , 'ＭＳ ゴシック' , 'MS Gothic' , HiraKakuProN-W3 */
+  @font-face {
+    font-family: 'reading-en';
+    src: local("Andale Mono"), local("Consolas"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+/* ----------
+    Tailwind config
+  ---------- */
+
+@layer components {
+  html * {
+    @apply 
+    leading-relaxed
+  }
+  body {
+    @apply
+    mx-auto
+    p-6
+    max-w-prose
+    max-w-screen-lg
+  }
+  
+  h1 {
+    @apply 
+      text-4xl 
+  }
+  h2 {
+    @apply text-3xl
+  }
+  h3, 
+  .site-title, 
+  .article-title {
+    @apply text-2xl
+  }
+  h4 {
+    @apply text-xl
+  }
+  h5 {
+    @apply text-lg
+  }
+  h6 {
+    @apply text-base
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply 
+    pt-7 
+    pb-2
+  }
+  ol,ul {
+    @apply 
+    text-base
+    py-2
+  }
+  li {
+    @apply 
+    text-base
+  }
+
+  .article p a,
+  .article li a {
+    text-decoration: underline;
+  }
+  .article p + ol,
+  .article p + ul,
+  .article ol + p,
+  .article ul + p {
+    @apply
+    -mt-3
+  }
+  .article ol{
+    @apply 
+    text-base
+    pt-0
+    pb-7
+    list-decimal
+    list-outside
+    pl-3
+  }
+  .article ul {
+    @apply 
+    text-base
+    pt-0
+    pb-7
+    list-disc
+    list-outside
+    /* pl-3 */
+  }
+  .article li {
+    @apply 
+    text-base
+    ml-4
+    pl-1
+    mb-2
+  }
+  .article img {
+    @apply
+    rounded-lg
+  }
+
+  blockquote {
+      background: var(--bg-quote-light);
+      border-color: var(--hl-purple-dk);
+    @apply
+      flex
+      font-normal
+      border-l-8
+      px-4
+      py-4
+      mt-4
+      mb-7
+      rounded-md
+    }
+
+  .dark blockquote {
+    background: var(--bg-quote-dark);
+  }
+  blockquote p {
+    @apply
+    p-0
+  }
+
+  p {
+    @apply 
+    text-base
+    pb-7
+  }
+  p a, li a{
+    @apply hover:underline
+  }
+
+  mark, .mark,
+  html.dark mark, html.dark .mark, 
+  .tag {
+    color: var(--text-light);
+    @apply
+    px-2
+    rounded-tl-3xl
+    rounded-bl-md
+    rounded-tr-md
+    rounded-br-3xl
+  }
+  
+  a.mark:hover,
+  .tag:hover,
+  .hl-green-lt {
+    background: var(--hl-green-lt);
+  }
+
+  .hl-purple-lt {
+    background: var(--hl-purple-lt);
+  }
+
+  .hl-pink-lt {
+    background: var(--hl-pink-lt);
+  }
+
+  .site-title {
+    @apply
+    flex-auto 
+  }
+  nav {
+      @apply 
+      mb-4
+  }
+  nav, #themeToggle {
+    @apply 
+      flex 
+      items-center
+      h-fit
+  }
+  .nav-links {
+    background-color: var(--hl-pink-lt-tp);
+    font-family: "heading-en", "heading-ja", sans-serif;
+    
+    @apply
+    hidden
+    m-0
+    mt-20
+    md:rounded-md
+    md:items-center
+    md:flex
+    md:flex-row
+    md:gap-x-2
+    md:bg-transparent
+    md:mt-0
+  }
+  .nav-links a {
+    @apply 
+    flex
+    flex-col
+    items-center
+    py-4
+    font-bold
+    md:px-2
+    md:py-2
+  }
+  footer svg:hover, 
+  footer svg:focus {
+    background-color: var(--hl-green-lt);
+    color: var(--text-light);
+    fill: var(--text-light);
+    @apply 
+    rounded-md
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--hl-green-lt);
+    color: var(--text-light);
+    fill: var(--text-light);
+    @apply 
+    md:rounded-md
+  }
+  .expanded {
+    display: unset;
+    @apply 
+      absolute 
+      inset-0
+      z-50
+      md:relative
+      md:m-0
+      md:rounded-md
+      md:items-center
+      md:flex
+      md:flex-row
+      md:gap-x-2
+      md:bg-transparent
+      md:mt-0
+  }
+  .nav-links.expanded a {
+    color: var(--text-light);
+  }
+  #themeToggle {
+    @apply ml-5
+  }
+  .hamburger {
+    @apply 
+    ml-5
+    mt-1
+    md:hidden
+  }
+
+  .tags {
+    @apply mb-4
+  }
+  .tag {
+    /* background: var(--text-light-tp); */
+    background: var(--hl-purple-lt);
+      @apply  
+      mr-2
+      py-1
+      text-xs
+      italic
+      leading-tight
+    }
+  ul.tags * {
+    @apply
+    text-base
+    leading-relaxed
+  }
+  html.dark .tag {
+    background: var(--hl-purple-dk);
+  }
+   html.dark .tag, 
+   html.dark .tag a {
+    color: var(--text-light);
+    }
+
+
+  /* ----------
+      Elements
+    ---------- */
+
+  html {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+
+  * {
+    font-family: "reading-en", "reading-ja", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  nav *,
+  h2 mark, 
+  .article-title {
+    font-family: "heading-en", "heading-ja", sans-serif;
+    @apply
+    font-bold
+  }
+  svg {
+    fill: currentColor;
+  }
+
+  /* nav styles */
+  a, footer svg {
+    color: var(--text-light);
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin-bottom:6px;
+    border-radius: 1000px;
+    background-color: var(--text-light);
+  }
+
+  html.dark .hamburger .line {
+    background-color: var(--text-dark);
+  }
+
+
+
+  html.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  html.dark a,
+  html.dark footer svg {
+    color: var(--text-dark);
+  }
+
+
+  /* ----------
+      Animations
+    ---------- */
+
+  .fade-down {
+    @apply
+    animate-fade-down 
+    animate-once 
+  }
+  .fade-left {
+      @apply
+      animate-fade-left 
+      animate-once 
+  }
+  .fade-right {
+      @apply
+      animate-fade-right 
+      animate-once 
+  }
+
+}

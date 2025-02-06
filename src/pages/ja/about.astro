@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SkillSet from '../../components/SkillSet.astro';
+import Timeline from '../../components/Timeline.astro';
+
+const pageTitle = "About Erika";
+---
+
+
+<BaseLayout pageTitle={pageTitle}>
+
+	<p class="intersect fade-right intersect-once">一言でいうと好奇心旺盛な人間。友人によると、私はほとんど全てのことについてオタク・・・だそうです。<br/>その影響は以下の通り。</p>
+
+	<h2 class="intersect fade-down intersect-once">できること</h2>
+	<SkillSet />
+
+	<h2 class="intersect fade-down intersect-once">経歴</h2>
+	<Timeline />
+
+</BaseLayout>
