@@ -5,6 +5,7 @@ import preact from '@astrojs/preact';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
+  // site: 'http://localhost:4321',
   site: 'https://3ded-eri.github.io',
   base: 'erikaobamacom',
   integrations: [preact(), tailwind()],
