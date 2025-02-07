@@ -6,6 +6,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://erikaobama.com',
+  base: '/',
   integrations: [preact(), tailwind()],
   i18n: {
     locales: ["en", "ja"],
