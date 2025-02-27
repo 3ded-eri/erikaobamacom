@@ -80,6 +80,8 @@
         "title": "Freelance designer",
         "code": "freelance1",
         "year": "2015",
+        "location": "remote",
+        "contract": "freelance",
         "duration": "Apr 2015 - May 2017",
         "tags": ["web design", "graphic design", "animated stickers"],
         "multiResponsibilities": true,
@@ -89,8 +91,8 @@
             {"url":"ifk-pixel-art-animation", "syntax":"webm"}
         ],
         "titleJa": "フリーランスデザイナー",
-        "locationJa": "",
-        "contractJa": "",
+        "locationJa": "リモート",
+        "contractJa": "フリーランス",
         "durationJa": "2015年4月～2017年5月",
         "tagsJa": ["Webデザイン", "グラフィックデザイン", "アニメーションスタンプ"],
         "responsibilitiesJa": ["Webサイト制作", "デコメ絵文字・スタンプ制作"]
