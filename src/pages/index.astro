@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SkillSet from '../components/SkillSet.astro';
 import ArticlePost from '../components/ArticlePost.astro';
+import { sortByDate } from "../utils/sortByDate.js";
 import contactURL from '../components/contactURL.txt?raw';
 
 const pageCategory = "index"
@@ -29,7 +30,7 @@ const pageTitle = "I'm a full-stack designer based in Fukuoka, Japan.";
 </div>
 
 <ul>
-  {allPosts.slice(0,1).map((post: any) => <ArticlePost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}image={post.frontmatter.image} tags={post.frontmatter.tags} />)}
+  {allPosts.sort(sortByDate).slice(0,1).map((post: any) => <ArticlePost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}image={post.frontmatter.image} tags={post.frontmatter.tags} />)}
 </ul>
 
   <p class="intersect fade-down intersect-once">And, I offer <mark class="hl-pink-lt">web/graphic/motion design and coding work</mark> backed by commercial designer experience. <br/>I also love exploring 3D modeling, modern design theory and new technology. So, please <a href={contactURL} class="mark hl-pink-lt">tell me</a> if you have something nice to share.</p>

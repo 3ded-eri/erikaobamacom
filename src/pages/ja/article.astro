@@ -1,4 +1,5 @@
 ---
+import { sortByDate } from "../../utils/sortByDate.js";
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticlePost from '../../components/ArticlePost.astro';
 const allPosts = Object.values(import.meta.glob('../posts/ja/*.md', { eager: true }));
@@ -6,7 +7,7 @@ const pageTitle = "Article";
 ---
 <BaseLayout pageTitle={pageTitle}>
 		<ul class="overflow-x-hidden pt-7">
-			{allPosts.map((post: any) => <ArticlePost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}image={post.frontmatter.image} tags={post.frontmatter.tags} />)}
+			{allPosts.sort(sortByDate).map((post: any) => <ArticlePost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}image={post.frontmatter.image} tags={post.frontmatter.tags} />)}
 		</ul>
 </BaseLayout>
 	</body>

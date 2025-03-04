@@ -35,14 +35,14 @@
   ---------- */
 
   @font-face {
-    font-family: 'heading-en';
+    font-family: 'heading';
     src: local("Futura"), local("Trebuchet MS"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
-    font-family: 'reading-en';
+    font-family: 'reading';
     src: local("Andale Mono"), local("Consolas"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3");
     font-weight: normal;
     font-style: normal;
@@ -88,11 +88,25 @@
   h6 {
     @apply text-base
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1, h2 {
     @apply 
     pt-7 
     pb-2
   }
+  h3 {
+    @apply 
+    pt-4 
+    pb-1
+  }
+  h4, 
+  h5, 
+  h6 {
+    @apply
+    pt-2
+    pb-1
+  }
+  
   ol,ul {
     @apply 
     text-base
@@ -108,13 +122,11 @@
     text-decoration: underline;
   }
   .article p + ol,
-  .article p + ul,
-  .article ol + p,
-  .article ul + p {
+  .article p + ul {
     @apply
     -mt-3
-  }
-  .article ol{
+  } 
+  .article ol {
     @apply 
     text-base
     pt-0
@@ -137,25 +149,33 @@
     text-base
     ml-4
     pl-1
-    mb-2
+    /* mb-2 */
   }
+  .article li + li,
+  .article ol li ul:last-child, 
+  .article ul li ul:last-child {
+    @apply 
+    mb-0
+    pb-0
+  }
+  
   .article img {
     @apply
     rounded-lg
   }
 
   blockquote {
-      background: var(--bg-quote-light);
-      border-color: var(--hl-purple-dk);
+    background: var(--bg-quote-light);
+    border-color: var(--hl-purple-dk);
     @apply
-      flex
-      font-normal
-      border-l-8
-      px-4
-      py-4
-      mt-4
-      mb-7
-      rounded-md
+    flex
+    font-normal
+    border-l-8
+    px-4
+    py-4
+    mt-4
+    mb-7
+    rounded-md
     }
 
   .dark blockquote {
@@ -164,6 +184,28 @@
   blockquote p {
     @apply
     p-0
+  }
+
+  pre {
+    /* background: var(--bg-quote-dark) !important; */
+    /* color: var(--bg-light) !important; */
+    counter-reset: line;
+    @apply
+    rounded-md
+    p-2
+    /* text-wrap */
+  }
+  code .line{
+      counter-increment: line;
+  }
+
+  code .line::before {
+    content: counter(line);
+    width: 2rem;
+    color: var(--text-dark) !important;
+    @apply
+    inline-block
+    mr-1
   }
 
   p {
@@ -217,7 +259,7 @@
   }
   .nav-links {
     background-color: var(--hl-pink-lt-tp);
-    font-family: "heading-en", "heading-ja", sans-serif;
+    font-family: "heading", sans-serif;
     
     @apply
     hidden
@@ -290,7 +332,6 @@
     @apply mb-4
   }
   .tag {
-    /* background: var(--text-light-tp); */
     background: var(--hl-purple-lt);
       @apply  
       mr-2
@@ -323,14 +364,14 @@
   }
 
   * {
-    font-family: "reading-en", "reading-ja", sans-serif;
+    font-family: "reading", sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6,
   nav *,
   h2 mark, 
   .article-title {
-    font-family: "heading-en", "heading-ja", sans-serif;
+    font-family: "heading", sans-serif;
     @apply
     font-bold
   }

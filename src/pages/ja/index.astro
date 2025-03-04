@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SkillSet from '../../components/SkillSet.astro';
 import ArticlePost from '../../components/ArticlePost.astro';
+import { sortByDate } from "../../utils/sortByDate.js";
 import contactURL from '../../components/contactURL.txt?raw';
 
 const pageCategory = "index"
@@ -29,7 +30,7 @@ const pageTitle = "福岡を拠点とするオールラウンド型デザイナ�
 </div>
 
 <ul>
-  {allPosts.slice(0,1).map((post: any) => <ArticlePost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}image={post.frontmatter.image} tags={post.frontmatter.tags} />)}
+  {allPosts.sort(sortByDate).slice(0,1).map((post: any) => <ArticlePost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}image={post.frontmatter.image} tags={post.frontmatter.tags} />)}
 </ul>
 
   <p class="intersect fade-down intersect-once">また、デザイナー経験を生かした<mark class="hl-pink-lt">Web・グラフィックデザイン、モーショングラフィックス、コーディング等のお仕事</mark>については随時承っております。<br/>3Dモデリングや最新技術にも興味があるので、<a href={contactURL} class="mark hl-pink-lt">関連したお話も大歓迎</a>です。</p>
