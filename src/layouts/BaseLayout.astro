@@ -24,11 +24,9 @@ const siteKeywordsJa = "ポートフォリオ, ブログ, 考察, ウェブデ�
     <meta name="keywords" content={ Astro.currentLocale === "ja" ? `${siteKeywordsJa}` : `${siteKeywordsEn}`}>
     {pageDescription && <meta name="description" content={pageDescription}>}
     <!-- Open Graph tags -->
-    <meta property="og:title" content="My New Astro Website" />
+    <meta property="og:title" content={pageTitle} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.example.com/" />
-    <meta property="og:description" content="Welcome to my new Astro site!" />
-    <meta property="og:image" content="https://www.example.com/_astro/seo-banner.BZD7kegZ.webp">
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:image:alt" content="">
   </head>
   <body class=`${pageCategory}`>
