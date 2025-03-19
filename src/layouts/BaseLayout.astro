@@ -4,7 +4,7 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 // import { SignIn, SignOut } from 'auth-astro/components'
 const pagePathname = Astro.url.pathname
-const { pageTitle, pageCategory, pageDescription } = Astro.props;
+const { pageTitle, pageCategory, pageDescription, pageImageUrl, pageImageAlt } = Astro.props;
 const siteTitle = "Erika Obama"
 const siteKeywordsEn = "portfolio, blog, web design, UI design, UX design, graphic design, motion design, design, motion graphics, animated stickers, animated emojis, 3D modeling, 3D art, illustration, kawaii illustration, all-rounder, fullstack designer, fullstack, web designer, graphic designer, designer, webdev"
 const siteKeywordsJa = "ポートフォリオ, ブログ, 考察, ウェブデザイン, Webデザイン, UIデザイン, UXデザイン, グラフィックデザイン, モーショングラフィックス, アニメーションスタンプ, 動くスタンプ, アニメーション絵文字, 動く絵文字, 3Dモデリング, 3DCG, イラスト, かわいいイラスト, ジェネラリスト, デザイナー, Webデザイナー, グラフィックデザイナー, Web開発"
@@ -27,7 +27,8 @@ const siteKeywordsJa = "ポートフォリオ, ブログ, 考察, ウェブデ�
     <meta property="og:title" content={pageTitle} />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:image:alt" content="">
+    <meta property="og:image" content={pageImageUrl}>
+    <meta property="og:image:alt" content={pageImageAlt}>
   </head>
   <body class=`${pageCategory}`>
     <!-- <SignIn provider="github" />
