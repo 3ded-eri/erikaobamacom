@@ -3,7 +3,6 @@ import timelineData from './timelineData.json';
 ---
 
 <ul class="timeline">
-    <!-- Enhance -->
     {timelineData.map((timeline) => {
         return (
     <li>
@@ -40,7 +39,7 @@ import timelineData from './timelineData.json';
                 ) : timeline.works != null && timeline.worktype === "video" ? (
                     <p class="works">
                         {timeline.works.map((work) => (
-                            <img src=`/src/images/portfolio/${work.url}-thumb.webp` class="w-auto max-w-64" data-toggle="modal" data-target=`#modal-${timeline.code}-${work.url}` aria-expanded="false" aria-haspopup="dialog" />
+                            <img src=`/src/images/portfolio/${work.url}_thumb.webp` class="w-auto max-w-64" data-toggle="modal" data-target=`#modal-${timeline.code}-${work.url}` aria-expanded="false" aria-haspopup="dialog" />
                         ))}
                     </p>
                 ) : (

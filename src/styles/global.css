@@ -10,14 +10,18 @@
   :root {
     --bg-light: #fbfaf9;
     --bg-light-tp: rgba(251, 250, 249, .9);
+
     --text-light: #6d4f4f;
     --text-light-tp: rgba(109, 79, 79, .9);
+    --text-dark: #8c8282;
+    --text-dark-tp: rgba(140, 130, 130, .97);
+    --text-pink: #ee92a9;
+
     --bg-dark: #000;
     --bg-dark-tp: rgba(251, 250, 249, .7);
     --bg-quote-light: hsl(30, 20%, 94%);
     --bg-quote-dark: hsl(40, 18%, 8%);
-    --text-dark: #8c8282;
-    --text-dark-tp: rgba(140, 130, 130, .97);
+
     --hl-green-lt: #a8e6cf;
     --hl-green-lt-tp: rgba(168, 230, 207, .97);
     --hl-purple-lt: #d8d3f3;
