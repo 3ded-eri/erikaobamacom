@@ -23,7 +23,11 @@ const zoomContainer = svg.append("g")
   .attr("transform",
         `translate(-${margin.left}, -${margin.top})`);
 
-await d3.json("/src/components/posts/4_graph-data.json").then( function( data) {
+d3.json("/src/components/posts/4_graph-data.json").then( function( data) {
+
+  console.log(data); // Check the data here
+    // your existing code
+
 
   // Filter nodes and links based on type
   const filteredNodesCategory = data.nodes.filter(d => d.type === "category");
@@ -241,6 +245,9 @@ const catname = zoomContainer
 
   return svg.node();
 
+})
+.catch(function(error) {
+    console.error('Error loading JSON:', error); // Log any errors
 });
 </script>
 
