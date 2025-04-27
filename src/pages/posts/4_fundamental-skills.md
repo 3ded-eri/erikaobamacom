@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout4.astro
 title: 'Fundamental Skills'
 category: 'article'
-pubDate: 2025-04-25
+pubDate: 2025-04-27
 description: 'Technology changes over time. So, learn how to find and reuse the fundamental elements of your specialized skill.'
 image:
     url: '/src/images/posts/4_fundamental-skills/4_fundamental-skills_thumb.webp'
