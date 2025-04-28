@@ -23,7 +23,7 @@ const zoomContainer = svg.append("g")
   .attr("transform",
         `translate(-${margin.left}, -${margin.top})`);
 
-d3.json("../../src/components/posts/4_graph-data.json").then( function( data) {
+d3.json("../../../src/components/posts/4_fundamental-skills/4_graph-data.json").then( function( data) {
 
   // Filter nodes and links based on type
   const filteredNodesCategory = data.nodes.filter(d => d.type === "category");

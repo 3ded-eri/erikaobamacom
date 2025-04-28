@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
-import Graph from '../components/posts/4_graph.astro';
+import Graph from '../components/posts/4_fundamental-skills/4_graph.astro';
 ---
 <BaseLayout pageTitle={frontmatter.title} pageCategory={frontmatter.category} pageDescription={frontmatter.description} pageImageUrl={frontmatter.image.url} pageImageAlt={frontmatter.image.alt}>
   <p class="intersect fade-right intersect-once"><em>{frontmatter.description}</em></p>
