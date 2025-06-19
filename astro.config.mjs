@@ -14,5 +14,13 @@ export default defineConfig({
       routing: {
         prefixDefaultLocale: false,
     }
-  }
+  },
+    markdown: {
+    shikiConfig: {
+      themes: {
+        light: 'catppuccin-latte',
+        dark: 'catppuccin-frappe',
+      },
+    },
+  },
 });

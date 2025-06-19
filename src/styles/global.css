@@ -40,14 +40,14 @@
 
   @font-face {
     font-family: 'heading';
-    src: local("Futura"), local("Trebuchet MS"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3");
+    src: local("Futura"), local("Trebuchet MS"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3"), local("Noto Sans CJK JP"), sans-serif;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'reading';
-    src: local("Andale Mono"), local("Consolas"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3");
+    src: local("Andale Mono"), local("Consolas"), local("ヒラギノ角ゴ ProN"), local("Hiragino Kaku Gothic ProN"), local("游ゴシック"), local("YuGothic"), local("Yu Gothic"), local("メイリオ"), local("Meiryo"), local("ＭＳ ゴシック"), local("MS Gothic"), local("HiraKakuProN-W3"), local("Noto Sans CJK JP"), monospace;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -205,12 +205,28 @@
 
   code .line::before {
     content: counter(line);
-    width: 2rem;
-    color: var(--text-dark) !important;
+    width: 1rem;
+    /* color: var(--text-dark) !important; */
     @apply
     inline-block
     mr-1
   }
+
+  code {
+    @apply
+    text-sm
+  }
+
+  html.dark .astro-code,
+  html.dark .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    /* Optional, if you also want font styles */
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+
 
   p {
     @apply 
