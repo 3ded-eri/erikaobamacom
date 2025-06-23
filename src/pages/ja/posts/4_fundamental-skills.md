@@ -7,6 +7,7 @@ description: '時代とともにテクノロジーは変化するから、自分
 image:
     url: '/src/images/posts/4_fundamental-skills/4_fundamental-skills_thumb.webp'
     alt: '別領域のスキル同士がどのように繋がるかの図'
+    hero: 'no'
 tags: ["ポートフォリオ", "スキル", "インタラクティブ", "D3"]
 ---
 

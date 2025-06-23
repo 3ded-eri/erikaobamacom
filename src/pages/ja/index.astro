@@ -6,7 +6,7 @@ import { sortByDate } from "../../utils/sortByDate.js";
 import contactURL from '../../components/contactURL.txt?raw';
 
 const pageCategory = "index"
-const allPosts = Object.values(import.meta.glob('../posts/ja/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('../ja/posts/*.md', { eager: true }));
 const pageTitle = "福岡を拠点とするオールラウンド型デザイナー";
 ---
 <BaseLayout pageTitle={pageTitle} pageCategory={pageCategory}>

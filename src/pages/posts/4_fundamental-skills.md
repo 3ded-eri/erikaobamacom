@@ -7,6 +7,7 @@ description: 'Technology changes over time. So, learn how to find and reuse the 
 image:
     url: '/src/images/posts/4_fundamental-skills/4_fundamental-skills_thumb.webp'
     alt: 'Connection of my skills from different domains'
+    hero: 'no'
 tags: ["portfolio", "skills", "interactive", "D3"]
 ---
 

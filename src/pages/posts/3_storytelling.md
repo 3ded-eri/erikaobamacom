@@ -7,6 +7,7 @@ description: 'There is less chance of a bad visual design making a bad presentat
 image:
     url: '/src/images/posts/3_storytelling/3_storytelling_workflow_thumb.webp'
     alt: 'Presentation slide design workflow'
+    hero: 'no'
 tags: ["design", "PowerPoint", "Google Slides", "workflow"]
 ---
 

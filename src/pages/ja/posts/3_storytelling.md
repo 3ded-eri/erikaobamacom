@@ -7,6 +7,7 @@ description: '実は「見た目は二の次」なケースが多かったりし
 image:
     url: '/src/images/posts/3_storytelling/3_storytelling_workflow_ja_thumb.webp'
     alt: 'プレゼン資料制作フロー'
+    hero: 'no'
 tags: ["デザイン", "PowerPoint", "Googleスライド", "ワークフロー"]
 ---
 
